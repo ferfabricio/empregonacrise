@@ -53,7 +53,6 @@ function Empresa() {
         logoUrl: Yup.string().url('Por favor informe uma URL válida.').required('Por favor informe uma URL válida.'),
         opportunities: Yup.string().url('Por favor informe uma URL válida.').required('Por favor informe uma URL válida.')
       })}
-
       onSubmit={(values, { setSubmitting }) => {
         window.grecaptcha.execute(process.env.REACT_APP_CAPTCHA_KEY, {
           action: 'create_company'
