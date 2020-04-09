@@ -22,14 +22,14 @@ export default function App() {
   }, [])
 
   return <Router>
-    <ul>
-      <li>
+    <ul className='menu'>
+      <li className='menu-item'>
         <Link to="/">Home</Link>
       </li>
-      <li>
+      <li className='menu-item'>
         <Link to="/cadastrar-empresa">Cadastre sua empresa</Link>
       </li>
-      <li>
+      <li className='menu-item'>
         <Link to="/sobre">Sobre</Link>
       </li>
     </ul>
