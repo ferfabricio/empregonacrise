@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle />
+    <GlobalStyle whiteColor />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
