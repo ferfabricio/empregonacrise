@@ -61,6 +61,9 @@ function Empresa() {
             ...values,
             recaptcha: resultToken
           }
+
+          console.log(token)
+
           postData(
               `https://2r04ysk3wk.execute-api.us-east-1.amazonaws.com/dev/company`,
               data
