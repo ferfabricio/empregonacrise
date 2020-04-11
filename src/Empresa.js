@@ -65,7 +65,7 @@ function Empresa() {
           console.log(token)
 
           postData(
-              `https://2r04ysk3wk.execute-api.us-east-1.amazonaws.com/dev/company`,
+              process.env.REACT_APP_BACKEND_URL,
               data
           ).then((result) => {
               alert(JSON.stringify(result, null, 2));
