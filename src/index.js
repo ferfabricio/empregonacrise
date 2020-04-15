@@ -1,19 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { createGlobalStyle } from 'styled-components'
+import { Reset } from 'styled-reset'
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    background-color: ${props => (props.whiteColor ? 'hsl(0, 0%, 90%)' : 'hsl(0, 0%, 20%)')};
-    color: ${props => (props.whiteColor ? 'black' : 'white')};
-  }
-`
 
 ReactDOM.render(
   <React.StrictMode>
-    <GlobalStyle whiteColor />
+    <Reset />
     <App />
   </React.StrictMode>,
   document.getElementById('root')
