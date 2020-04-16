@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const HeaderContainer = styled.header`
   width: 100%;
-  height: 480 px;
+  height: 150px;
   background-color: #322972;
 `
 
@@ -48,7 +48,6 @@ const RegisterContainer = styled.div`
 `
 
 const RegisterText = styled(Link)`
-  font-family: Rubik;
   font-size: 14px;
   font-weight: 500;
   font-stretch: normal;
