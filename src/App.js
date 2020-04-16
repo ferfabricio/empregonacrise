@@ -1,14 +1,18 @@
 import React, { useEffect } from 'react';
+import styled from 'styled-components'
 import {
   BrowserRouter as Router,
   Route,
   Switch
 } from 'react-router-dom'
-
-import DefaultPage from './pages/DefaultPage'
 import Sobre from './Sobre';
 import Home from './pages/Home';
 import Empresa from './Empresa';
+import Header from './components/Header'
+
+const RootContainer = styled.div`
+  font-family: Rubik;
+`
 
 export default function App() {
 
@@ -21,7 +25,8 @@ export default function App() {
   }, [])
 
   return <Router>
-    <DefaultPage>
+    <RootContainer>
+      <Header />
       <Switch>
         <Route path="/oferecer-vaga">
           <Empresa />
@@ -33,6 +38,6 @@ export default function App() {
           <Home />
         </Route>
       </Switch>
-    </DefaultPage>
+    </RootContainer>
   </Router>
 }
