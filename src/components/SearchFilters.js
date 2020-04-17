@@ -30,17 +30,15 @@ const FilterContainer = styled.aside`
   }
 `
 
-export default function SearchFilters() {
+export default function SearchFilters({ categories }) {
   return <FilterContainer>
     <FindInput placeholder='Local de trabalho' />
     <div>
       <h3>Categoria</h3>
       <ul>
-        <li>Backend (50)</li>
-        <li>Backend</li>
-        <li>Backend</li>
-        <li className='selected'>Backend (123)</li>
-        <li>Backend</li>
+        {categories.map(categorie => {
+          return <li key={categorie.name}>{categorie.name} ({categorie.opportunities})</li>
+        })}
       </ul>
       <h3>Suporte a realocação pós crise</h3>
     </div>

@@ -11,6 +11,9 @@
 # production
 /build
 
+# logos
+/public/logos
+
 # misc
 .DS_Store
 .env.local
