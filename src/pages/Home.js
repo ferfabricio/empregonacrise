@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
+import { useQuery } from 'react-query'
 import CompanyOffers from '../components/CompanyOffers'
 import Search from '../components/Search'
 import SearchFilters from '../components/SearchFilters'
+import loadOffers from '../services/loadOffers'
 
 const BannerText = styled.div `
     width: 735px;
@@ -28,14 +30,25 @@ const BodyContainer = styled.div`
 `
 
 export default function Home() {
-    return <div>
-      <BannerTop>
-        <BannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod</BannerText>
-        <Search />
-      </BannerTop>
-      <BodyContainer>
-        <SearchFilters />
-        <CompanyOffers />
-      </BodyContainer>
-    </div>
+  const { status, data, error } = useQuery("offers", loadOffers)
+  const [offers, setOffers] = useState({
+    total: 0,
+    categories: [],
+    companies: []
+  })
+
+  return <div>
+    <BannerTop>
+      <BannerText>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod</BannerText>
+      <Search />
+    </BannerTop>
+    <BodyContainer>
+      {status === 'loading' && <div>Carregando...</div>}
+      {status === 'error' && <div>Error: {error.message}</div>}
+      {status === 'success' && <>
+        <SearchFilters categories={data.categories} />
+        <CompanyOffers offers={data} categories={data.categories} />
+      </>}
+    </BodyContainer>
+  </div>
 }

@@ -10,6 +10,7 @@ const OffersContainer = styled.section`
     font-size: 18px;
     font-weight: 400;
     margin: 30px auto 12px 12px;
+    color: #4a4a4a;
   }
 `
 
@@ -20,25 +21,16 @@ const CardsContainer = styled.div`
   margin-top: 20px;
 `
 
-export default function CompanyOffers() {
+export default function CompanyOffers({ offers, categories }) {
   return <OffersContainer>
     <div>
-      <h2>Empresas que estão contratando (52)</h2>
+      <h2>Empresas que estão contratando ({offers.total})</h2>
     </div>
     <CardsContainer>
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
-      <CompanyCard />
+      {offers.companies.length === 0 && <div>Nenhuma empresa cadastrada.</div>}
+      {offers.companies.length > 0 && offers.companies.map(company => {
+        return <CompanyCard key={company.name} company={company} categories={categories} />
+      })}
     </CardsContainer>
   </OffersContainer>
 }

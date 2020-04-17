@@ -1,0 +1,104 @@
+{
+  "total": 10,
+  "categories": [
+    {
+      "name": "Backend",
+      "opportunities": 50,
+      "color": "#3a49a7"
+    },
+    {
+      "name": "Business application",
+      "opportunities": 1,
+      "color": "#9cc66e"
+    },
+    {
+      "name": "Full-stack",
+      "opportunities": 2,
+      "color": "#515151"
+    },
+    {
+      "name": "Network",
+      "opportunities": 5,
+      "color": "#50e3c2"
+    },
+    {
+      "name": "UI",
+      "opportunities": 5,
+      "color": "#f56f3f"
+    },
+    {
+      "name": "UX",
+      "opportunities": 5,
+      "color": "#f5a623"
+    }
+  ],
+  "companies": [
+    {
+      "opportunities": [
+        "Backend",
+        "Network"
+      ],
+      "logoUrl": "apple.png",
+      "name": "Apple Inc",
+      "location": "Palo Alto / CA"
+    },
+    {
+      "opportunities": [
+        "Full-stack",
+        "Backend",
+        "Network"
+      ],
+      "logoUrl": "facebook.png",
+      "name": "Facebook",
+      "location": "San Diego / CA"
+    },
+    {
+      "opportunities": [
+        "Backend",
+        "Network"
+      ],
+      "logoUrl": "ge.png",
+      "name": "GE",
+      "location": "São Paulo / SP"
+    }, {
+      "opportunities": [
+        "Full-stack",
+        "Backend",
+        "Network"
+      ],
+      "logoUrl": "google.png",
+      "name": "Google",
+      "location": "Belo Horizonte / MG"
+    },
+    {
+      "opportunities": [
+        "Backend",
+        "Network"
+      ],
+      "logoUrl": "ibm.png",
+      "name": "IBM",
+      "location": "Campinas / SP"
+    }, {
+      "opportunities": [
+        "Full-stack",
+        "Backend",
+        "Network",
+        "UI",
+        "UX",
+        "Business application"
+      ],
+      "logoUrl": "samsung.png",
+      "name": "Samsung",
+      "location": "Manaus / AM"
+    }, {
+      "opportunities": [
+        "Full-stack",
+        "Backend",
+        "Network"
+      ],
+      "logoUrl": "toyota.jpg",
+      "name": "Toyota",
+      "location": "Campinas / SP"
+    }
+  ]
+}

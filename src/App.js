@@ -15,7 +15,6 @@ const RootContainer = styled.div`
 `
 
 export default function App() {
-
   useEffect(() => {
     const script = document.createElement('script')
 
