@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useQuery } from 'react-query'
 import CompanyOffers from '../components/CompanyOffers'
@@ -31,11 +31,6 @@ const BodyContainer = styled.div`
 
 export default function Home() {
   const { status, data, error } = useQuery("offers", loadOffers)
-  const [offers, setOffers] = useState({
-    total: 0,
-    categories: [],
-    companies: []
-  })
 
   return <div>
     <BannerTop>

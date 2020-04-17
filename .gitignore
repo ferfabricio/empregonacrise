@@ -11,8 +11,8 @@
 # production
 /build
 
-# logos
-/public/logos
+# # logos
+# /public/logos
 
 # misc
 .DS_Store

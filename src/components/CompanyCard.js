@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Image from 'react-graceful-image'
 
 const CompanyContainer = styled.div`
   width: 280px;
@@ -99,7 +98,7 @@ export default function CompanyCard({ company, categories }) {
 
   return <CompanyContainer>
     <div className='logo'>
-      <img src={'http://localhost:3000/logos/' + logoUrl} height={64} alt={name} />
+      <img src={process.env.REACT_APP_URL + '/logos/' + logoUrl} height={64} alt={name} />
     </div>
     <div className='nameLocationContainer'>
       <div className='name'>{name}</div>
