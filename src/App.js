@@ -5,9 +5,9 @@ import {
   Route,
   Switch
 } from 'react-router-dom'
-import Sobre from './Sobre';
+import Sobre from './pages/Sobre';
 import Home from './pages/Home';
-import Empresa from './Empresa';
+import Empresa from './pages/Empresa';
 import Header from './components/Header'
 
 const RootContainer = styled.div`
