@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Container, Clearfix, ImageHeader, Text, TextPagename } from './styled';
+import { Container, Clearfix, ImageFooter, Text, TextPagename } from './styled';
 
 import heart from '../../images/heart.svg';
 
 export default function Footer({ pageName }) {
     return (
         <Container>
-            <ImageHeader src={heart} />
+            <ImageFooter src={heart} />
             <Clearfix margin={10} />
             <Text>É simples mas estamos fazendo de coração.</Text>
             <Clearfix margin={5} />

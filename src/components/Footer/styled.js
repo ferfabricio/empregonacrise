@@ -15,7 +15,7 @@ export const Clearfix = styled.div`
     height: ${props => props.margin}px;
 `;
 
-export const ImageHeader = styled.img`
+export const ImageFooter = styled.img`
      height: 45px;
 `;
 
