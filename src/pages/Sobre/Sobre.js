@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Footer from '../../components/Footer';
+
 import {
     Container,
     Clearfix,
@@ -63,6 +65,7 @@ export default function Sobre() {
                 <Clearfix margin={30} />
                 <TextBold>contato@empregonacrise.com.br</TextBold>
             </Content>
+            <Footer pageName="Sobre nós" />
         </Container>
     )
 }

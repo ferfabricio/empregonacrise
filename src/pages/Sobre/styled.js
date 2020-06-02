@@ -1,10 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 20px;
-    /* font-family: Rubik; */
+     width: 100%;
 `;
 
 export const Clearfix = styled.div`
@@ -14,6 +11,7 @@ export const Clearfix = styled.div`
 export const ContentTitle = styled.div`
     width: 100%;
     padding: 20px;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +20,6 @@ export const ContentTitle = styled.div`
 
 export const LogoMask = styled.img`
     height: 65px;
-    color: #322972;
 `;
 
 export const Title = styled.h1`

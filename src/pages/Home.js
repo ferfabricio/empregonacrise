@@ -6,7 +6,9 @@ import Search from '../components/Search'
 import SearchFilters from '../components/SearchFilters'
 import loadOffers from '../services/loadOffers'
 
-const BannerText = styled.div `
+import Footer from '../components/Footer';
+
+const BannerText = styled.div`
     width: 735px;
     height: 86px;
     font-size: 35px;
@@ -17,7 +19,7 @@ const BannerText = styled.div `
     margin: 0 auto;
 `
 
-const BannerTop = styled.section `
+const BannerTop = styled.section`
   width: 100%;
   height: 300px;
   background-color: #322972;
@@ -45,5 +47,6 @@ export default function Home() {
         <CompanyOffers offers={data} categories={data.categories} />
       </>}
     </BodyContainer>
+    <Footer />
   </div>
 }
