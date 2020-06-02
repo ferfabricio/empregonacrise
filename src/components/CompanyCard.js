@@ -113,7 +113,7 @@ export default function CompanyCard({ company, categories }) {
           })}
         </LabelContainer>
       </div>
-        {opportunities.length > 4 && <div className='moreCategories'>+{opportunities.length - 4} cargos</div>}
+      {opportunities.length > 4 && <div className='moreCategories'>+{opportunities.length - 4} cargos</div>}
     </>}
   </CompanyContainer>
 }
